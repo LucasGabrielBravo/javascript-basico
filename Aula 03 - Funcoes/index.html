@@ -1,0 +1,34 @@
+<!--
+    Objetivo:
+        Aprender a criar e usar funcoes
+
+    Obs.: Para vizualizar o resultado abra o arquivo em um navegador (Google Chrome) pressione F12 e cliem em console
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funcoes</title>
+</head>
+<body>
+    
+    <script>
+        //Declaracao da funcao => function nomeDafuncao(parametros caso seja necessario){}
+        //Os parametros sao valores que devem ser passados na funcao quando ela for usada, mas pode hava funcoes sem parametros, depende da necessidade
+
+        //funcao que soma dois valores passanos nela        
+        function soma(num1, num2){      //num1 e num2 -> sao os parametros
+            var result = num1 + num2;   //Variavel result recebe a soma de num1 + num2
+            
+            return result;              //A funcao retorna o valor da soma dos numeros que forem passados como parametros
+        }
+
+        var resultado = soma(10, 5);    //Cria uma variavel resultado e diz que ela é igual ao retorno da funcao soma -> soma recebeu 10 e 5 como parametros
+        console.log(resultado);         //imprime o valor armazenado em resultado no console
+        console.log(soma(11, 22));      //imprime no console o retorno da funcao soma sem armazenar previamente em uma variavel
+    </script>
+</body>
+</html>

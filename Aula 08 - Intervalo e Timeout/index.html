@@ -1,0 +1,55 @@
+<!--
+    Objetivo:
+        Aprender a utilizar setInterval, setTimeout, clearInterval
+
+    Obs.: Para vizualizar o resultado abra o arquivo em um navegador (Google Chrome) pressione F12 e cliem em console
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intervalo e Timeout</title>
+</head>
+<body>
+    
+    <script>
+        //Variavel usada apenas para interacao com o programa "so pra haver algo pra ser visto"                        
+        var num = 1;
+
+        //Funcao que soma a variavel o valor dela mesma
+        function somaX(x){
+            return x += x;
+        }
+
+        //Funcao que sera repetida pelo setInterval
+        function exibir(){
+            num = somaX(num);
+            console.log(num);
+        }
+
+        //Funcao que sera usada no setTimeout e ira parar a repeticao do setInterval
+        function parar(){
+            //clearInterval, usada para parar um setInterval
+            clearInterval(interval);
+        }
+
+        /*O setInterval nao precisa ser usado dentro de uma variavel, porem, o clearInterval
+        exige que setInterval seja "passado" como uma variavel;
+        Uma vez q se inicial um setInterval, ele pode ser parado com o clearInterval
+        
+        setInterval, usada para repetir indefinidamente a execucao de uma funcao
+        (funcao que sera repetida, tempo a cada milisegundos entre os intervalos)
+        */
+        var interval = setInterval(exibir, 1000);   //repete a funcao exibir a cada 1segundo
+        
+        //setTimeout, usada para executar uma funcao depois de um certo tempo determinado
+        //(funcao que sera executada, tempo em milisegundos que levara pra funcao ser executada)
+        setTimeout(parar, 5000);
+
+
+    </script>
+</body>
+</html>

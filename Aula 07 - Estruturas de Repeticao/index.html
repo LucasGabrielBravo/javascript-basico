@@ -1,0 +1,55 @@
+<!--
+    Objetivo:
+        Aprender a utilizar as estrutura de repeticao
+
+    Obs.: Para vizualizar o resultado abra o arquivo em um navegador (Google Chrome) pressione F12 e cliem em console
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estrutura de Repeticao</title>
+</head>
+<body>
+    
+    <script>                        
+        //For mais usado quando se tem certeza de quantas vezes precisara repetir
+        //While mais usando quando nao se sabe quantas vezes sera necessario repetir
+
+        //For
+        //(variavel contadora = valor inicial dela;condicao para repeticao;incremento a cada ciclo)
+        //variavel contadora => É usada para controlar o for, pode ser iniciada com qualquer valor
+        //condicao para repeticao => Enquanto a condicao for verdadeira, continuara havendo repeticao: Ex.: Enquanto i for menor que 101 repita
+        //incremento a cada cicli => Muda o valor do contador para que em algum momento a condicao de repeticao torne-se falsa
+        
+        //Imprime de 0 a 100
+        for(var i = 0; i < 101; i++){
+            console.log(i);
+        }
+
+        console.log("-----------------------------------------------------------"); //Linha para dividir os valores no console, apenas pra facilitar a leitura
+
+        //Imprime de 100 a 0
+        for(var i = 100; i > -1; i--){
+            console.log(i);
+        }
+
+        console.log("-----------------------------------------------------------"); //Linha para dividir os valores no console, apenas pra facilitar a leitura  
+
+
+        //While
+        //(condicao para repeticao)
+        //Diferente do for, o while precisa apenas da condicao de repeticao, porem a forma como essa condicao deixa de ser verdadeira deve ser feita de forma mais manual
+        //Abaixo, a um var j = 0; para servi de contado
+        //No final do ciclo a um j++ para incrementar +1 a j e assim a condicao deixar de ser verdadeira em um determinado momento
+        var j = 0;
+        while(j < 101){
+            console.log(j);            
+            j++;
+        }
+    </script>
+</body>
+</html>

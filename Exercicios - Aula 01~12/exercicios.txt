@@ -1,0 +1,43 @@
+Tente fazer esses exercicios depois de ler e escrever(sem dar crlt+c) as aulas de 1 a 12
+
+
+1º exercício
+Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+aparecer na tela. Obs.: Os quadrados naturalmente aparecerão um abaixo do outro, mas tente
+deixa-los um ao lado do outro. Para isso, será necessario usar a propriedade CSS "display" e
+passar como valor "inline-block"
+
+2º exercício
+Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+<copie abaixo>
+
+function getRandomColor() {
+ var letters = "0123456789ABCDEF";
+ var color = "#";
+ for (var i = 0; i < 6; i++) {
+ color += letters[Math.floor(Math.random() * 16)];
+ }
+ return color;
+}
+
+</nao copie>
+
+------
+3º exercício
+A partir do seguinte vetor:
+<copie abaixo>
+
+var nomes = ["Lucas", "Gabriel", "Bravo"]; 
+
+</nao copie>
+
+Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+● Lucas
+● Gabriel
+● Bravo
+
+4º exercício
+Adicione ao exercicio anterior um botao e uma caixa de texto(input). Ao clicar no botao, o conteudo
+da caixa de texto devera ser adicionado a lista e em sequencia a caixa de texto deve ficar em branco

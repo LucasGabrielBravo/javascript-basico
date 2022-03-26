@@ -1,0 +1,55 @@
+<!--
+    Objetivo:
+        Aprender a selecionar elementos html no javascript
+        Aprender a atribuir eventos a elementos html pelo javascript (é diferende de escrever o evento diretamente na tag)
+
+    Obs.: Para vizualizar o resultado abra o arquivo em um navegador (Google Chrome) pressione F12 e cliem em console
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trabalhando com a DOM</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="nome" id="nome" class="name">
+        <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+        /*
+        O document presente na grande maioria dos comandos indica que iremos trabalhar com
+        o documento (com os elementos do html presento no arquivo que esta rodando os scripts)
+        */
+
+        //<Formas de selecionar um elemento HTML>
+        //Referencia por id -  seleciona o elemento pelo atributo id
+        var byId = document.getElementById("nome");
+        //Referencia pelo nome da tag html - seleciona todos os elementos com a tag indicada; Retorna como array
+        var tagName = document.getElementsByTagName("input");
+        //Referencia pelo nome da classe - seleciona todos os elementos com class indicada; Retorna como array
+        var className = document.getElementsByClassName("nome");
+        //QuerySelector, o mais brabo!!!
+        //Faz tudo que os outros fazem
+        //Trabalha com o mesmo tipo de selecao que o CSS
+        var qs1 = document.querySelector("div#app input");      //Seleciona o input dentro de uma div com id = 'app'
+        var qs2 = document.querySelector("input[name=nome]");   //Seleciona o input com name = 'nome'
+        var qs3 = document.querySelectorAll("input");           //Seleciona todos os input; Retorna como array
+        //</Formas de selecionar um elemento HTML>
+
+        //Adicionar um evento a um elemento selecionado:
+        //Selecionamos o elemento e armazenamos ele em uma variavel
+        var btn = document.querySelector("button.botao")        //Seleciona o button com a classe botao
+
+        //Informamos a variavel q esta armazenando o elemento que queremos manipular e o evento que queremos atribuir a esse elemento
+        btn.onclick = function(){            
+            //Aqui dentro devemos passar as instrucao que serao executadas quando ocorrer o evento
+            alert(qs1.value);
+        }
+    </script>
+</body>
+</html>

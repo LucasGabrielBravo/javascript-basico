@@ -1,0 +1,41 @@
+<!--
+    Objetivo:
+        Aprender a manipular o style de um elemento html pelo javascript   
+
+    Obs.: Para vizualizar o resultado abra o arquivo em um navegador (Google Chrome) pressione F12 e cliem em console
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alterando Estilos</title>
+</head>
+<body>    
+    <div id="app">
+        <div class="box"></div>
+    </div>
+
+    <script>
+        /*
+        Tipos de selecao de CSS e querySelector
+        Por nome do elemento: "a", "div", "input", "ul", "li"...etc...
+        Por nome do atributo id: "#app", "#lista", "#botao" => Basta por # na frente do nome escrito no atributo id
+        Por nome da class: ".box", ".lista", ".botao" => Basta por . na frente do nome escrito no atributo class
+        Obs1.: Pesquisar seletores CSS -> há varios diferentes
+        Obs2.: Cada id deve ser exclusivo de um elemento no arquivo html, ou seja, não deve haver 2 ou mais elementos com um mesmo id
+        Obs3.: Uma class pode ser repetida em quantos elementos for necessaria, um elemento pode ter mais de uma class ex.: <div class="fundoVerde fontGrande">
+        */
+    
+        var box = document.querySelector(".box");   //Seleciona o elemento de classe ".box"
+        //style é usado para acessar os atributos CSS do objeto selecionado; pesquisar mais para ver outros atributos a serem manipulados
+        box.style.height = '100px';         //Altura = 100px => px = pixels
+        box.style.width = '100px';          //Largura
+        box.style.backgroundColor = "#F00"; //Cor de fundo em hexadecimal = Vermelho
+        //Ex.:Abaixo um exemplo de como seria selecionar a cor com RGBA, utial quando se precisa de transparecia
+        //box.style.backgroundColor = "rgba(255, 0,0, 0.1)"; //rgba(red, green, blue, a(0.0 ~ 1))
+    </script>
+</body>
+</html>

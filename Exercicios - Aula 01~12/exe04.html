@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exe 04</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="nome" id="nome"><button id="botao">Adicionar</button>
+    </div>
+
+    <script>
+        var nomes = ["Lucas", "Gabriel", "Bravo"];      //Array com os dados
+        var lista = document.createElement("ul");       //Obejto <ul>
+        var app = document.querySelector("#app");       //Seleciona o elemento app
+        var botao = document.querySelector("#botao");   //Seleciona o elemento botao
+        var inputNome = document.querySelector("#nome");//Seleciona o elemento nome
+        
+        app.appendChild(lista);  //Add lista dentro de app
+
+        //.length retorna o tamanho do array
+        for(var i = 0;i<nomes.length;i++){
+            var linha = document.createElement("li");       //cria o elemento li
+            var nome = document.createTextNode(nomes[i]);   //cria o texto que entrara na lista
+            linha.appendChild(nome);                        //Add o texto dentro do li
+            lista.appendChild(linha);                       //Add o li dentro do ul
+        }
+
+        //Adiciona comandos ao evento de onclick do botao
+        botao.onclick = function(){            
+            var nome = document.createTextNode(inputNome.value);    //Cria o elemento com o conteudo do input
+            var linha = document.createElement("li");               //Cria um elemento li
+            linha.appendChild(nome);                                //Add o nome a li
+            lista.appendChild(linha);                               //Add li a lista
+            inputNome.value = "";                                   //Apaga o conteudo do input
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!--
+    Objetivo:
+        Aprender a utilizar eventos no html
+
+    Obs.: Para vizualizar o resultado abra o arquivo em um navegador (Google Chrome) pressione F12 e cliem em console
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos Inline</title>
+</head>
+<body>
+    <!--
+        Criamos um bontao e colocamos como atributo onclick='clic(this)'
+        onclick e o evento de click do mouse ou seja, quando esse elemento for clicado, a funcao clic sera executada
+        o this usado como parametro passa o proprio elemento como parametro na funcao ou seja, a funcao ira receber o proprio botao como parametro
+    -->
+    <button onclick="clic(this)">Clicar</button>
+    <!-- Semelhante ao click do mouse, o onmouseover é o evento de 'passar o mouse por cima'-->
+    <button onmouseover="over(this)">Passar</button>
+    <script>
+        //Funcao clic, recebe um parametro, que deve ser um elemento de html
+        function clic(key){
+            alert(key.innerHTML);   //emite uma caixa de alerta contendo o valor escrito dentro do elemento recebido - no caso do botao, a plavar "Clicar"
+        }
+
+        //Funcao over, recebe um parametro, que deve ser um elemento de html
+        function over(key){
+            alert(key.innerHTML);   //emite uma caixa de alerta contendo o valor escrito dentro do elemento recebido - no caso do botao, a plavar "Passar"
+        }        
+    </script>
+</body>
+</html>

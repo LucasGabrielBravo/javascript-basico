@@ -1,0 +1,46 @@
+<!--
+    Objetivo:
+        Aprender a utilizar operadores logicos
+
+    Obs.: Para vizualizar o resultado abra o arquivo em um navegador (Google Chrome) pressione F12 e cliem em console
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operadores Logicos</title>
+</head>
+<body>
+    
+    <script>                        
+        // E = AND | OU = OR | NAO = NOT
+
+        var sexo = "M", idade = 22;
+
+        //E = AND
+        if(sexo === "M" && idade > 17){
+            console.log("M e >17");
+        }
+
+        //OU = OR
+        if(sexo === "F" || idade > 17){
+            console.log("F ou >17");
+        }
+
+        //Diferente de ---- Negacao
+        //Se sexo é diferente de "F" e idade nao é menor que 17 => o ! inverte o resultado booleano se era false vira true
+        if(sexo !== "F" && !(idade < 17)){
+            console.log("Diferente de F - invertendo o resultado da idade");
+        }
+
+        //Atribuicao de variavel a um resultado de comparacao
+        var masculino = (sexo === "M"); //Se sexo igual a "M" armazena "true" senão "false"
+        var feminino = (sexo === "F");  //Se sexo igual a "F" armazena "true" senão "false"
+
+        console.log("Masculino: "+masculino);
+        console.log("Feminino: "+feminino);
+    </script>
+</body>
+</html>

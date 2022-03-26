@@ -1,0 +1,45 @@
+<!--
+    Objetivo:
+        Aprender declaracao de variavel
+        Tipos de variavel
+
+    Obs.: Para vizualizar o resultado abra o arquivo em um navegador (Google Chrome) pressione F12 e cliem em console
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 1 - Variaveis e Dados</title>
+</head>
+<body>
+    
+    <!--Tag script, onde se escreve comandos javascript dento do html-->
+    <script>                
+        //Variaveis 'normais'
+        var nome = "Lucas"; //string        
+        var idade = 22; //Int        
+        var altura = 1.66 //Float
+        var humano = true; //boolean
+
+        //Vetor x Matriz
+        var alunos = ['Lucas', 'Gabriel', 'Frykyky'];
+
+        //Objeto
+        var aluno = {
+            nome: "Lucas",
+            idade: 22,
+            altura: 1.66,
+            humano: true
+        };
+
+        //Console.log imprime no console aquilo q é passado como parametro
+        //o '+' é usado para concatenar texto e variaveis
+        console.log("Variavel nome: "+nome);
+        console.log("Array alunos, primeiro indice: "+alunos[0]);
+        console.log("Objeto aluno, atributo nome: "+aluno.nome);
+    </script>
+</body>
+</html>

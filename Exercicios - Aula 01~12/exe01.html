@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exe 01</title>
+</head>
+<body>
+    <div id="app">
+        <button>Criar</button><br>
+        <div id="espaco"></div>
+    </div>
+
+    <script>
+        var esp = document.querySelector("#espaco");        //Selecionamos a div onde os quadrados serao criados
+
+        //Função responsavel por criar um quadrado novo
+        function addQuadrado(){                        
+            var quadrado = document.createElement("div");   //Cria um elemento div
+            quadrado.style.height = "100px";                //Define a Altura
+            quadrado.style.width = "100px";                 //Define a Largura
+            quadrado.style.backgroundColor = "#F00";        //Define a Cor de fundo
+            quadrado.style.display = "inline-block";        //Define o tipo de posicionamento do elemento. Nesse caso, ficará lado a lado
+
+            esp.appendChild(quadrado);                      //Adiciona o elemento a div#espaco
+        }
+
+        var but = document.querySelector("button");         //Seleciona o botao
+        but.onclick = function(){                           //Adiciona ao evento onclick do elemento a funcao addQuadrado();
+            addQuadrado();
+        }
+    </script>
+</body>
+</html>

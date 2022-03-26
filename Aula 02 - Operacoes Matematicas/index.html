@@ -1,0 +1,43 @@
+<!--
+    Objetivo:
+        Aprender como o javascript trabalha com os numeros
+        Aprender operacoes abreviadas
+
+    Obs.: Para vizualizar o resultado abra o arquivo em um navegador (Google Chrome) pressione F12 e cliem em console
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operacoes Matemaricas</title>
+</head>
+<body>
+    
+    <script>                
+        //Declaracao de variaveis em uma mesma linha separando por virgula
+        var x = 10, y = 5, z = "10";
+
+        //Soma o valor de X + Y
+        var somaxy = x + y;
+        //Concatena o valor de Y e Z pois Z não é um numero ja que esta entre ""
+        var concatyz = y + z;
+        //Soma o valor de y + z convertendo z em um numero - a funcao parseInt() converte um valor para inteiro
+        var somayz = y + parseInt(z);
+
+        console.log(x, y, z);   //imprime as variaveis
+        console.log(somaxy);    //imprime a soma de x + y
+        console.log(concatyz);  //imprime y e z concatenados
+        console.log(somayz);    //imprime a soma de y + z
+
+        //Operacoes abreviadas
+
+        x += 1; //soma x = x + 1
+        x -= 1; //subtração x = x - 1
+        x *= 2; //multiplicacao x = x * 2
+        x /= 2; //divisão x = x / 2
+    </script>
+</body>
+</html>

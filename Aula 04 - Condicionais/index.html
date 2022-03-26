@@ -1,0 +1,52 @@
+<!--
+    Objetivo:
+        Aprender a usar if, else e switch        
+
+    Obs.: Para vizualizar o resultado abra o arquivo em um navegador (Google Chrome) pressione F12 e cliem em console
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Condicionais</title>
+</head>
+<body>
+    
+    <script>
+        //A funcao retorna o genero do individuo com base na letra que ela recebe como parametro                        
+        function retornaSexo1(sexo){
+            //M = Masculino | F = Feminino
+            if(sexo === "M"){
+                return "Masculino";
+            }else if(sexo === "F"){
+                return "Feminino";
+            }else{
+                return "Outro";
+            }
+        }
+
+        //Mesma funcao, porem, agora usando switch e não if else
+        function retornaSexo2(sexo){
+            //No switch, passa-se a variavel que sera analisada e usa-se a palava reservada case para comparar os valores
+            switch (sexo) {
+                case "M":
+                    return "Masculino";
+                    break;  //Ao final de cada 'case' é necessario por um break
+                case "F":
+                    return "Feminino";
+                    break;
+                default:    //Caso não haja nenhum case igual a variavel informada, usa-se esse caso como situacao padrao
+                    return "Outro";
+            }
+        }
+
+        //Cria uma variavel e armazena o valor retornado pela funcao nela
+        var sexo = retornaSexo1("M");
+        console.log(sexo);  //imprime o valor da variavel no console
+        console.log(retornaSexo2("F")); //imprime no console o resultado da funcao sem passar por uma variavel antes
+    </script>
+</body>
+</html>

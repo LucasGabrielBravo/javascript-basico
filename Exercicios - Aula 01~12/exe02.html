@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exe 02</title>
+</head>
+<body>
+    <div id="app">
+        <button>Criar</button><br>
+        <div id="espaco"></div>
+    </div>
+
+    <script>
+        var esp = document.querySelector("#espaco");
+
+        //Função responsavel por criar um quadrado novo
+        function addQuadrado(){                        
+            var quadrado = document.createElement("div");   //Cria um elemento div
+            quadrado.style.height = "100px";                //Define a Altura
+            quadrado.style.width = "100px";                 //Define a Largura
+            quadrado.style.backgroundColor = "#F00";        //Define a Cor de fundo
+            quadrado.style.display = "inline-block";        //Define o tipo de posicionamento do elemento. Nesse caso, ficará lado a lado
+
+            quadrado.onmouseover = function(){                      //Adiciona ao evento onmouseover a alteracao da propriedade de cor de fundo
+                quadrado.style.backgroundColor = getRandomColor();  //Para que a cor seja igual ao retorno da funcao getRandomColor()
+            }
+            
+            esp.appendChild(quadrado);                      //Adiciona o elemento a div#espaco => Agora com um evento q faz com q ele mude de cor
+        }
+
+        var but = document.querySelector("button");         //Seleciona o botao
+        but.onclick = function(){                           //Adiciona ao evento onclick do elemento a funcao addQuadrado();
+            addQuadrado();
+        }
+
+        //Gera cores aleatoriamente
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";   //0 a F - total de 16 => Obs.: Variaveis do tipo String podem ser acessadas como Array, passando o valor da posicao para pegar um caracter especifico
+            var color = "#";                    //Inicia a string com # para formar o hexadecimal da cor
+            for (var i = 0; i < 6; i++) {       //Repete 6 vezes porq uma cor em hexadecimal tem 6 digitos de 0 a F
+                //Math é a biblioteca de funcoes matematicas do javascript
+                //floor arredonda um numero para inteiro e positivo
+                //random gera um numero aleatorio, a quantidade varia pelo numero que é multiplicado, nesse caso, varia de 0 a 15, mesmo tamanho de letters
+
+                //Gera um numero de 0 a 15 e então seleciona um caracter da variavel letters e adiciona-o a string color
+                color += letters[Math.floor(Math.random() * 16)]; //Ex.: 1ª execucao => "#4" 2ª => "#40" 3ª => "#408" 4ª => "#408F" 5ª => "#408F2" 6ª => "#408F2A"
+            }
+            return color;   //"#408F2A"
+        }                
+        
+    </script>
+</body>
+</html>

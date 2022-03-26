@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exe 03</title>
+</head>
+<body>
+    <div id="app">
+        
+    </div>
+
+    <script>
+        var nomes = ["Lucas", "Gabriel", "Bravo"];  //Array com os dados
+
+        var lista = document.createElement("ul");   //Cria um elemento <ul>
+
+        document.querySelector("#app").appendChild(lista);  //Add lista(<ul></ul>) dentro de app
+
+        //.length retorna o tamanho do array nesse caso: 3
+        for(var i = 0;i<nomes.length;i++){                  //Repete os codigos dentro do "for" enquanto i for menor que 3 passando assim pelos 3 indices do array
+            var linha = document.createElement("li");       //cria o elemento <li>
+            var nome = document.createTextNode(nomes[i]);   //cria o texto que entrara na lista usando o array de nomes + o valor de i para determinar o indice do array Ex.: 1º execucao => nomes[0], 2ª => nomes[1], 3ª => nomes[2]
+            linha.appendChild(nome);                        //Add o texto dentro do li
+            lista.appendChild(linha);                       //Add o li dentro do ul
+        }
+
+        //Adicione mais itens ao array para adicionar mais itens a lista caso queira
+    </script>
+</body>
+</html>

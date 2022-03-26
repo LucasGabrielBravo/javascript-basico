@@ -1,0 +1,39 @@
+<!--
+    Objetivo:
+        Aprender a criar e organizar elementos html usand javascript     
+
+    Obs.: Para vizualizar o resultado abra o arquivo em um navegador (Google Chrome) pressione F12 e cliem em console
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lidando Com Elementos</title>
+</head>
+<body>
+    <!--Div que sera usada como referencia-->    
+    <div id="app">
+        <input type="text" name="removido"><!--Elemento que sera removido pelo script-->
+    </div>
+
+    <script>    
+        var link = document.createElement("a");   //Cria um elemento HTML <a></a> e armazena na variavel
+        link.setAttribute("href", "localhost");   //Modifica o atributo 'href' do elemento selecionado      
+
+        var text = document.createTextNode("Link para o localhost");  //Cria um texto que pode ser passado como objeto do DOM(HTML) e armazena na variavel
+        link.appendChild(text);   //Adiciona o text dentro do elemento link "<link><text></link>" 
+            //O Texto dentro de <a></a> só foi possivel ser inserido ali por ter sido criado com createTextNode
+            //Nesse momento a variavel link contem isso => <a href="localhost">Link para o localhost</a>
+
+        var app = document.querySelector("#app"); //Seleciona o elemento de id "#app" -> <div id="app">
+        app.appendChild(link);                    //Adiciona link dentro de app -> Adicionamos tudo que estava em link dentro de app
+
+        var inp = document.querySelector("input");    //Seleciona o elemento input -> Note o tipo de selecao usada nessa linha
+        app.removeChild(inp); //Remove o elemento selecionado anteriormente de dentro do elemento app
+          
+    </script>
+</body>
+</html>
